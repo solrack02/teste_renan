@@ -130,7 +130,22 @@ xmlns="http://www.w3.org/2000/svg"
 
             styles:[`{ width: 50, height: 50 }`],
 
-            functions:[()=>{}],            childrenItems:[() =><></>],
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `Press`
+          ],
+
+          args,
+
+        }}/>],
 
             args,
           }}/>
