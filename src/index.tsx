@@ -133,7 +133,12 @@ xmlns="http://www.w3.org/2000/svg"
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [
-() => console.log("1"), () => console.log("2")]
+() => console.log("1"), 
+() => console.log("2"), async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: ['example.A1.lists.iptsChanges.name'],
+          value: ['no value']
+        }})]
  , trigger: 'on press'
 }})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
