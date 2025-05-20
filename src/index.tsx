@@ -130,7 +130,12 @@ xmlns="http://www.w3.org/2000/svg"
 
             styles:[`{ width: 50, height: 50 }`],
 
-            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [
+() => console.log("1");, () => console.log("2");]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
